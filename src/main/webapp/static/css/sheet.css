@@ -1,0 +1,377 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 7, 2014, 10:03:42 PM
+    Author     : Mac
+*/
+html, body{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Century Gothic', Arial;
+    padding: 0;
+}
+
+.title{
+    position: relative;
+    height: 25px;
+    padding: 5px;
+    border-top: 5px;
+    border-bottom: 5px;
+    background-color: #99D9EA;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: 'Century Gothic', Arial;
+}
+.btn{
+    width: 95%;
+    height: 35px;
+  position: relative;
+  vertical-align: top;
+  padding: 0;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #d35400;
+  border: 0;
+  border-bottom: 2px solid #c54e00;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #c54e00;
+  box-shadow: inset 0 -2px #c54e00;
+}
+.btn:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#draftedDiv, #statisticsDiv, #buttonsDiv, #clockDiv, #playersDiv, #ownerDiv, .positionDiv{
+    display: inline-block;
+    border: 7px solid #474950;
+    vertical-align: top;
+}
+.positionDiv{
+    height: 100%;
+    border: none;
+    font-size: 0px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    min-width: 65px;
+    overflow: hidden;
+}
+.positionDiv:nth-child(4){
+    width: 1190px;
+}
+
+.draftButton{
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    top: 50%;
+    margin-top: -12.5px;
+    right: 10px;
+    padding: 0;
+    line-height: 25px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #27ae60;
+    border: 0;
+    border-bottom: 2px solid #219d55;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #219d55;
+    box-shadow: inset 0 -2px #219d55;
+}
+.draftButton:active {
+    top: 50%;
+    margin-top: -13.5px;
+    outline: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #c0392b;
+    border: 0;
+    border-bottom: 2px solid #b53224;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #b53224;
+    box-shadow: inset 0 -2px #b53224;
+}
+
+.positionDiv > .title {
+    margin-top: 0;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+}
+.positionDiv > .heading {
+    position: relative;    
+    height: 25px;
+    padding: 5px;
+    border-top: 5px;
+    border-bottom: 5px;
+    background-color: #474950;
+    text-align: center;
+    line-height: 25px;
+    font-size: 0;
+    color: #FFFFFF;
+}
+
+.positionDiv > .heading > section{
+    display: inline-block;
+    border-left: 3.5px solid red;
+    border-right: 3.5px solid red;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Century Gothic', Arial;
+}
+.positionDiv > .heading > section:nth-child(1){
+    border-left: none;
+}
+.positionDiv > .heading > section:nth-child(7){
+    border-right: none;
+}
+
+#draftedDiv{
+    height: 915px;
+    min-height: 100%;
+    width: 250px;
+}
+
+#statisticsDiv{
+    width: 54%;
+    height: 150px;
+}
+
+#buttonsDiv{
+    text-align: center;
+    width: 15%;
+    height: 130px;
+    padding: 10px;
+}
+#buttonsDiv > button {
+    width: 95%;
+    height: 35px;
+    margin-bottom: 40px;
+}
+#buttonsDiv > input {
+    width: 94%;
+    height: 35px;
+}
+
+#clockDiv{
+    position: relative;
+    text-align: center;
+    width: 13.15%;
+    height: 150px;
+}
+#clock{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+#playersDiv{
+    position: absolute;
+    top: 221px;
+    left: 268px;
+    width: 85.15%;
+    height: 694px;
+    max-width: 85.15%;
+}
+
+#ownerDiv{
+    position: absolute;
+    top: 168px;
+    left: 268px;
+    width: 85.15%;
+    height: 35px;
+    max-width: 85.15%;
+}
+.ownerName{
+    width: 20%;
+    height: 99%;
+    margin-left: 10px;
+    max-width: 20%;
+    overflow: hidden;
+    line-height: 35px;
+    color: #000000;
+}
+.ownerTeamName{
+    width: 20%;
+    height: 99%;
+    margin-left: 10px;
+    max-width: 20%;
+    overflow: hidden;
+    line-height: 35px;
+    color: #000000;
+}
+.msgToOwner{
+    width: 45%;
+    height: 99%;
+    margin-left: 10px;
+    max-width: 45%;
+    overflow: hidden;
+    line-height: 35px;
+    color: #000000;
+}
+
+.pContainer{
+    overflow: hidden;
+    height: 619px;
+    max-height: 619px;
+}
+
+.pStatDisp{
+    
+}
+
+.playerContainer{
+    height: 34.5px;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+.playerContainer:nth-child(odd){
+    background-color: #e8e8e8;
+}
+.playerContainer > * {
+    opacity: 1;
+    display: inline-block;
+    font-size: 16px;
+    text-align: left;
+    color: #000000;
+    position: absolute;
+    height: 100%;
+    background-color: transparent;
+}
+.playerContainer:hover{
+    background-color: #16A7D3;
+    color: #FFFFFF;
+}
+.playerContainer:active{
+    background-color: #88C370;
+    color: #FFFFFF;
+}
+
+.playerContainer > section {
+    height: 34.5px;
+    background-color: transparent;
+    text-align: left;
+    line-height: 34.5px;
+    font-size: 16px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+section[data-pos='qb']{
+    background-color: #f6546a;
+}
+
+section[data-pos='rb']{
+    background-color: #ff8c00;
+}
+
+section[data-pos='wr']{
+    background-color: #0e77be;
+}
+
+section[data-pos='te']{
+    background-color: #45d6bd;
+}
+
+section[data-pos='k']{
+    background-color: #5c5ba2;
+}
+
+section[data-pos='def']{
+    background-color: #1f2838;
+}
+
+section[data-position="name"]{
+    width: 22%;
+}
+section[data-position="team"]{
+    width: 12%;
+}
+section[data-position="att"]{
+    width: 12%;
+}
+section[data-position="comp"]{
+    width: 12%;
+}
+section[data-position="lng"]{
+    width: 12%;
+}
+section[data-position="yds"]{
+    width: 12%;
+}
+section[data-position="td"]{
+    width: 12%;
+}
+
+::-webkit-scrollbar {  
+    width: 0;
+    background-color: transparent;
+}  
+::-webkit-scrollbar-track {  
+    background-color: transparent;  
+    border: none;
+    width: 0;
+}  
+::-webkit-scrollbar-thumb {  
+    background-color: transparent;
+    width: 0;
+}  
+::-webkit-scrollbar-thumb:hover {  
+    background-color: transparent;
+    width: 0;
+}
+
+
+.playerContainer > section:nth-child(1){
+    left: 0;
+    width: 23.8%;
+    top: 0;
+}
+.playerContainer > section:nth-child(2){
+    left: 23.8%; 
+    width: 11.61%;
+    top: 0;
+    
+}
+.playerContainer > section:nth-child(3){
+    left: 36.3%;
+    width: 11.55%;
+    top: 0;
+}
+.playerContainer > section:nth-child(4){
+    left: 48.7%;
+    width: 11.55%;
+    top: 0;
+}
+.playerContainer > section:nth-child(5){
+    left: 61.1%;
+    width: 11.55%;
+    top: 0;
+}
+.playerContainer > section:nth-child(6){
+    left: 73.5%;
+    width: 11.55%;
+    top: 0;
+}
+.playerContainer > section:nth-child(7){
+    left: 85.9%;
+    width: 13%;
+    top: 0;
+}

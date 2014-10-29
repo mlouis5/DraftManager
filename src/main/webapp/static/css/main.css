@@ -1,0 +1,223 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 24, 2014, 1:58:06 PM
+    Author     : MacDerson
+*/
+html,body{
+    height:100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#leagueOptions {
+    text-align: center;
+    overflow: hidden;
+}
+#leagueOptions > p{
+    position: relative;
+    font-size: 1.3em;
+    color: white;
+    background-color: #FF6D6E;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 95%;
+}
+#leagueOptions > .choice{
+    position: relative;
+    display: inline-block;
+    background-color: #7ECFFE;
+    margin: 0;
+    border-left: 1px solid #FFFFFF;
+    padding: 5px;
+    width: 250px;
+    height: 20px;
+    color: #FFFFFF;
+      
+}
+#leagueOptions > .choice:hover{
+    background-color: #96d7fd;
+    cursor: pointer;
+}
+/*.hidden{
+    display: none;
+    overflow: hidden;
+    height: 0;
+    border: 0px solid orange;
+    text-align: center;
+    line-height: 160px;
+}*/
+
+#leagues{
+    height: 30px;
+    padding: 5px;
+    width: 200px;
+}
+
+#summary{
+    position: relative;
+    height: 120px;
+    width: 100%;
+    background-color: #393939; 
+    overflow: hidden;
+    text-align: center
+}
+
+#leagueInfo{
+    font-size: 0;
+}
+.leagueDisc{
+    text-align: center;
+    font-size: 16px;
+    border-left: 2px solid #FFFFFF; 
+    margin: 0;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #FF6D6E;
+    height: 25px;
+    padding: 5px;
+    width: 15%;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+.leagueDisc:nth-child(1){
+    border-left: none;
+}
+
+.owner{
+    opacity: 0;
+    position: absolute;
+    /*top: 72px;*/
+    bottom: 5px;
+    height: 42px;
+    width: 148px;
+    /*border: 3px solid #F0F0F0;*/
+    border-left: 3px solid #FFFFFF;
+    /*margin-top: 30px;
+    margin-left: 6.3px;*/
+    margin-right: 0;
+    display: inline-block;
+    /*vertical-align: top;*/
+    background-color: #7ECFFE;
+}
+
+.teamName{
+    border-bottom: 3px solid #FFFFFF;
+    height: 20px;
+    margin-top: 0;
+    line-height: 20px;
+    text-align: center;
+    font-size: .7em;
+    color: #393939;    
+}
+
+.ownerName{
+    height: 20px;
+    margin-top: 0;
+    line-height: 20px;
+    text-align: center;
+    font-size: .85em;
+    color: #393939;
+}
+
+#board{
+    position: relative;
+    width: 100%;
+    border-top: 4px solid #FF9666;
+    height: 962px;
+    margin-top: 0;
+    background-color: #F9F9F9;
+}
+
+.pick{/*pick is a subset of board*/
+    opacity: 0;
+    position: absolute;
+    width: 148px;
+    height: 60px;
+    border: 2px solid #393939;
+    overflow: hidden;
+    /*border-radius: 3px;*/
+    background-color: #FFFFFF;
+    color: #393939;
+    /*margin-top: 1.75px;
+    margin-left: 6.3px;*/
+    /*-webkit-box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 2px 3px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 2px 3px 0px rgba(50, 50, 50, 0.75);*/
+    display: inline-block;
+}
+
+.pos{/*pos is a subset of pick*/
+    width: 35px;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.topline{/*topline is a subset of pick*/
+    position: absolute;
+    top: 0;
+    left: 35px;
+    font-size: .9em;
+    display: inline-block;
+    width: 113px;
+    height: 29px;
+    border-bottom: 1px solid black;
+    vertical-align: top;
+    text-align: center;
+    line-height: 29px;
+}
+
+.bottomline{/*bottomline is a subset of pick*/
+    position: relative;
+    display: inline-block;
+    width: 148px;
+    height: 30px;
+    border-bottom: 1px solid black;
+    font-size: 0;
+}
+
+.team, .proj{/*team is a subset of bottomline*/
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+section[data-pos='QB']{
+    background-color: #f6546a;
+}
+
+section[data-pos='RB']{
+    background-color: #ff8c00;
+}
+
+section[data-pos='WR']{
+    background-color: #0e77be;
+}
+
+section[data-pos='TE']{
+    background-color: #45d6bd;
+}
+
+section[data-pos='K']{
+    background-color: #5c5ba2;
+}
+
+section[data-pos='DEF']{
+    background-color: #1f2838;
+}

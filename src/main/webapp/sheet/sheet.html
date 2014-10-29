@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Draft Sheet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="../static/css/sheet.css" media="all"/>
+        <link type="text/css" rel="stylesheet" href="../static/css/timecircles.css" media="all"/>
+    </head>
+    <body>
+        <div>
+            <div id="draftedDiv">
+                <section class="title">Drafted</section>
+            </div>
+
+            <div id="statisticsDiv">
+                <section class="title">Statistics</section>
+                <section class="statContainer"></section>
+            </div>
+
+            <div id="buttonsDiv">
+                <button id="proposeId" class="btn">Propose Trade</button>
+                <input placeholder="Search"/>
+            </div>
+
+            <div id="clockDiv">
+                <section id="clock" data-timer="60"></section>
+            </div>
+
+            <div id="ownerDiv">
+                <section class="ownerName"></section>
+                <section class="ownerTeamName"></section>
+                <section class="msgToOwner"></section>
+                <button id="DraftBtn" class="draftButton">Draft</button>
+            </div>
+            
+            <div id="playersDiv">
+                <div class="positionDiv" id="all">
+                    <section id="allPlayer" data-pos="All" class="title">ALL</section>
+                    <section class="heading">
+                        <section data-position="att" id="allAtt" class="pStatDisp">Pos</section>
+                        <section data-position="comp" id="allComp" class="pStatDisp">Rank</section>
+                        <section data-position="name" id="allName" class="pStatDisp">Name</section>
+                        <section data-position="team" id="allTeam" class="pStatDisp">Team</section>
+                        <section data-position="lng" id="allInt" class="pStatDisp">Proj</section>
+                        <section data-position="yds" id="allYds" class="pStatDisp">Age</section>
+                        <section data-position="td" id="allTd" class="pStatDisp">Inj Status</section>
+                    </section>
+                    <section id="allContainer" class="pContainer"></section>
+                </div>
+                <div class="positionDiv" id="qb">
+                    <section id="qbPlayer" data-pos="qb" class="title">QB</section>
+                    <section class="heading">
+                        <section data-position="name" id="qbName" class="pStatDisp">Name</section>
+                        <section data-position="team" id="qbTeam" class="pStatDisp">Team</section>
+                        <section data-position="att" id="qbAtt" class="pStatDisp">Pass Att</section>
+                        <section data-position="comp" id="qbComp" class="pStatDisp">Pass Comp</section>
+                        <section data-position="lng" id="qbInt" class="pStatDisp">Int</section>
+                        <section data-position="yds" id="qbYds" class="pStatDisp">Pass Yds</section>
+                        <section data-position="td" id="qbTd" class="pStatDisp">Pass TDs</section>
+                    </section>
+                    <section id="qbContainer" class="pContainer"></section>
+                </div>
+                <div class="positionDiv" id="rb">
+                    <section id="rbPlayer" data-pos="rb" class="title">RB</section>
+                    <section class="heading">
+                        <section data-position="name" id="rbName" class="pStatDisp">Name</section>
+                        <section data-position="team" id="rbTeam" class="pStatDisp">Team</section>
+                        <section data-position="att" id="rbRec" class="pStatDisp">Att</section>
+                        <section data-position="comp" id="rbLong" class="pStatDisp">Rush Long</section>
+                        <section data-position="lng" id="rbTdLng" class="pStatDisp">Longest TD</section>
+                        <section data-position="yds" id="rbYds" class="pStatDisp">Rush Yds</section>
+                        <section data-position="td" id="rbTd" class="pStatDisp">Rush TDs</section>
+                    </section>
+                    <section id="rbContainer" class="pContainer"></section>
+                </div>
+                <div class="positionDiv" id="wr">
+                    <section id="wrPlayer" data-pos="wr" class="title">WR</section>
+                    <section class="heading">
+                        <section data-position="name" id="wrName" class="pStatDisp">Name</section>
+                        <section data-position="team" id="wrTeam" class="pStatDisp">Team</section>
+                        <section data-position="att" id="wrRec" class="pStatDisp">Rec</section>
+                        <section data-position="comp" id="wrLong" class="pStatDisp">Rec Long</section>
+                        <section data-position="lng" id="wrTdLng" class="pStatDisp">Longest TD</section>
+                        <section data-position="yds" id="wrYds" class="pStatDisp">Rec Yds</section>
+                        <section data-position="td" id="wrTd" class="pStatDisp">Rec TDs</section>
+                    </section>
+                    <section id="wrContainer" class="pContainer"></section>
+                </div>
+                <div class="positionDiv" id="te">
+                    <section id="tePlayer" data-pos="te" class="title">TE</section>
+                    <section class="heading">
+                        <section data-position="name" id="teName" class="pStatDisp">Name</section>
+                        <section data-position="team" id="teTeam" class="pStatDisp">Team</section>
+                        <section data-position="att" id="teRec" class="pStatDisp">Rec</section>
+                        <section data-position="comp" id="teLong" class="pStatDisp">Rec Long</section>
+                        <section data-position="lng" id="teTdLng" class="pStatDisp">Longest TD</section>
+                        <section data-position="yds" id="teYds" class="pStatDisp">Rec Yds</section>
+                        <section data-position="td" id="teTd" class="pStatDisp">Rec TDs</section>
+                    </section>
+                    <section id="teContainer" class="pContainer"></section>
+                </div>
+                <div class="positionDiv" id="def">
+                    <section id="defPlayer" data-pos="def" class="title">DEF</section>
+                    <section class="heading">
+                        <section data-position="name" id="defName" class="pStatDisp">Team</section>
+                        <section data-position="team" id="defFum" class="pStatDisp">Force Fum</section>
+                        <section data-position="lng" id="defTdLng" class="pStatDisp">Fum Rec</section>
+                        <section data-position="yds" id="defYds" class="pStatDisp">Total Fum</section>
+                        <section data-position="td" id="defTd" class="pStatDisp">Yds off fum</section>
+                        <section data-position="att" id="defRec" class="pStatDisp">Def Int</section>
+                        <section data-position="comp" id="defLong" class="pStatDisp">Def Sacks</section>
+                    </section>
+                    <section id="defContainer" class="pContainer"></section>
+                </div>
+                <div class="positionDiv" id="k">
+                    <section id="kPlayer" data-pos="k" class="title">K</section>
+                    <section class="heading">
+                        <section data-position="name" id="kName" class="pStatDisp">Name</section>
+                        <section data-position="team" id="kTeam" class="pStatDisp">Team</section>
+                        <section data-position="att" id="kRec" class="pStatDisp">FG Att</section>
+                        <section data-position="comp" id="kLong" class="pStatDisp">FG Made</section>
+                        <section data-position="lng" id="kTdLng" class="pStatDisp">XP Att</section>
+                        <section data-position="yds" id="kYds" class="pStatDisp">XP Made</section>
+                        <section data-position="td" id="kTd" class="pStatDisp">FG Yards</section>
+                    </section>
+                    <section id="kContainer" class="pContainer"></section>
+                </div>
+            </div>
+
+            <div id="paramsDiv"></div>
+        </div>
+<!--        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../static/js/libs/timecircles/TimeCircles.js"></script>-->
+<!--        <script>
+            $(document).ready(function () {
+                init();
+
+                function init() {
+                    var tabs = [];
+                    var index = 0;
+                    $(".positionDiv").each(function () {
+                        tabs[index++] = new PlayerTab($(this).attr("id"), $(this).find(".title").attr("id"), ".heading");
+                    });
+                    $(tabs).each(function (index, obj) {
+                        obj.setTabs(tabs);
+                    });
+
+
+                    $("#clock").TimeCircles({
+                        time: {
+                            Days: {show: false},
+                            Hours: {show: false},
+                            Minutes: {show: false}
+                        }
+                    });
+                }
+            });
+
+            function PlayerTab(_tabId, _observableId, _headingClass) {
+
+                var tabId = _tabId;
+                var obsElem = $("#" + _observableId);
+                var parent = $("#" + _tabId);
+                var isOpen = parent.width() > 1100;
+                var otherTabs = [];
+
+                if (!isOpen) {
+                    $(parent.find(_headingClass)).children().each(function (index, elem) {
+                        $("#" + elem.id).css({
+                            display: "none"
+                        });
+                    });
+                    $(obsElem.find("button")).css({
+                        display: "none"
+                    });
+                }
+
+                obsElem.click(function () {
+                    if (!isOpen) {
+                        open();
+                    }
+                });
+
+                function close() {
+                    parent.animate({
+                        width: "65px"
+                    }, 600);
+                    $(parent.find(_headingClass)).children().each(function (index, elem) {
+                        $("#" + elem.id).animate({
+                            display: "none",
+                            opacity: 0
+                        }, 200);
+                    });
+                    $(obsElem.find("button")).css({
+                        display: "none"
+                    });
+                    isOpen = false;
+                }
+                ;
+
+                function open() {
+                    parent.animate({
+                        width: "1190px"
+                    }, 600);
+                    isOpen = true;
+
+                    $(otherTabs).each(function (index, obj) {
+                        if (obj.isOpen() && obj.getId() !== tabId) {
+                            obj.close();
+                        }
+                    });
+                    $(parent.find(_headingClass)).children().each(function (index, elem) {
+                        $("#" + elem.id).css({
+                            display: "inline-block",
+                            opacity: 0
+                        });
+                    }).animate({
+                        opacity: 1
+                    }, 1200);
+                    $(obsElem.find("button")).css({
+                        display: "inline-block"
+                    });
+                }
+                ;
+
+                return{
+                    close: function () {
+                        close();
+                    },
+                    isOpen: function () {
+                        return isOpen;
+                    },
+                    setTabs: function (_tabs) {
+                        otherTabs = _tabs;
+                    },
+                    getId: function () {
+                        return tabId;
+                    }
+                };
+            }
+            ;
+        </script>-->
+        <script data-main="../static/js/components/sheetController" src="../static/js/libs/require/require.js"></script>
+    </body>
+</html>
